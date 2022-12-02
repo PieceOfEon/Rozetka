@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="katalog.png" />
+    <None Remove="lupa.png" />
+    <None Remove="micro.png" />
+    <None Remove="rozetka.png" />
+    <None Remove="tchk.png" />
+    <None Remove="zelenka.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="katalog.png" />
+    <Resource Include="lupa.png" />
+    <Resource Include="micro.png" />
+    <Resource Include="rozetka.png" />
+    <Resource Include="tchk.png" />
+    <Resource Include="zelenka.png" />
+  </ItemGroup>
+
+</Project>

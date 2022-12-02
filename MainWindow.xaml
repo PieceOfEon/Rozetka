@@ -1,0 +1,70 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rozetka"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="Rozetka.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1200">
+    <Grid Background="AntiqueWhite">
+        <Border Width="1200" Background="Black" Height="80" VerticalAlignment="Top"/>
+
+       
+        <StackPanel>
+
+            <TextBox Padding="2" x:Name="search"   Width="500" Height="30" Margin="25" Background="White"  materialDesign:HintAssist.Hint="Я ищу..." Style="{StaticResource ResourceKey=MaterialDesignTextBox}" FontSize="16" BorderThickness="0,0,0,1" mah:ControlsHelper.FocusBorderThickness="0,0,10,0"/>
+
+            <Grid Margin="0 0 0 25">
+                <Button BorderBrush="Black" HorizontalAlignment="Stretch" Width="96" Margin="-700,-56,0,56">
+                    <Button.Background>
+                        <ImageBrush ImageSource="katalog.png"/>
+                    </Button.Background>
+
+                </Button>
+            </Grid>
+
+
+        </StackPanel>
+        <Border CornerRadius="2" x:Name="lupa" Width="30" Height="29" VerticalAlignment="Top" Margin="-522,25,0,56" BorderBrush="Black"  >
+
+            <Border.Background>
+                <ImageBrush ImageSource="/lupa.png"/>
+            </Border.Background>
+        </Border>
+        <Button x:Name="micro"  BorderBrush="{x:Null}" HorizontalAlignment="Stretch" Width="30" Height="29" Margin="525,25,0,0" VerticalAlignment="Top" BorderThickness="0,0,0,0">
+            <Button.Background>
+                <ImageBrush ImageSource="/micro.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="naiti"  BorderBrush="Black" HorizontalAlignment="Stretch" Width="60" Height="31" Margin="610,24,0,0" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/zelenka.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="rozetka"  BorderBrush="Black" HorizontalAlignment="Stretch" Width="120" Height="31" Margin="-960,24,0,0" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/rozetka.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="tchk"  BorderBrush="Black" HorizontalAlignment="Stretch" Width="37" Height="31" Margin="-1125,24,0,0" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/tchk.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ru" materialDesign:TextBlockAssist.AutoToolTip="False" Content="RU"  BorderBrush="Black" HorizontalAlignment="Center" Width="50" Height="31" Margin="750,24,0,0" VerticalAlignment="Top" Background="Black" MouseEnter="ru_MouseEnter" MouseLeave="ru_MouseLeave">
+            
+        </Button>
+        <Button x:Name="UA" materialDesign:TextBlockAssist.AutoToolTip="False" Content="UA"  BorderBrush="Black" HorizontalAlignment="Center" Width="50" Height="31" Margin="850,24,0,0" VerticalAlignment="Top" Background="Black" MouseEnter="UA_MouseEnter" MouseLeave="UA_MouseLeave">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,0.7" StartPoint="0.5,0.3">
+                    <GradientStop Color="Yellow" Offset="0.5"/>
+                    <GradientStop Color="#FF4343EC" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+
+        </Button>
+    </Grid>
+</Window>
+
