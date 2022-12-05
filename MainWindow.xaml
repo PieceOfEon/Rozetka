@@ -7,14 +7,24 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="Rozetka.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1200">
-    <Grid Background="AntiqueWhite">
+        Title="MainWindow" Height="854" Width="1200">
+    <Window.Resources>
+        <Image x:Key="Image.1" Source="/first.png"/>
+        <Image x:Key="Image.2" Source="/2.png"/>
+        <Image x:Key="Image.3" Source="/3.png"/>
+        <Image x:Key="Image.4" Source="/4.png"/>
+        <Image x:Key="Image.5" Source="/5.png"/>
+        <Image x:Key="Image.6" Source="/6.png"/>
+        <Image x:Key="Image.7" Source="/7.png"/>
+        <Image x:Key="Image.8" Source="/8.png"/>
+    </Window.Resources>
+    <Grid Background="White">
         <Border Width="1200" Background="Black" Height="80" VerticalAlignment="Top"/>
 
-       
+
         <StackPanel>
 
-            <TextBox Padding="2" x:Name="search"   Width="500" Height="30" Margin="25" Background="White"  materialDesign:HintAssist.Hint="Я ищу..." Style="{StaticResource ResourceKey=MaterialDesignTextBox}" FontSize="16" BorderThickness="0,0,0,1" mah:ControlsHelper.FocusBorderThickness="0,0,10,0"/>
+            <TextBox Padding="2" x:Name="search"   Width="500" Height="30" Margin="25" Background="White"  materialDesign:HintAssist.Hint="Я шукаю..." Style="{StaticResource ResourceKey=MaterialDesignTextBox}" FontSize="16" BorderThickness="0,0,0,1" mah:ControlsHelper.FocusBorderThickness="0,0,10,0"/>
 
             <Grid Margin="0 0 0 25">
                 <Button BorderBrush="Black" HorizontalAlignment="Stretch" Width="96" Margin="-700,-56,0,56">
@@ -24,8 +34,129 @@
 
                 </Button>
             </Grid>
+            <Menu x:Name="menuone" Height="488" Width="200" Margin="-975, -40,0,0"  >
+                <MenuItem x:Name="m1" Header="" Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m11.png"/>
+                    </MenuItem.Background>
 
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m2.png"/>
+                    </MenuItem.Background>
 
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m3.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m4.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m5.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m6.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m7.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m8.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m9.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m10.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m12.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m13.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m14.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m15.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m16.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="30">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/m17.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+            </Menu>
+            <ContentPresenter x:Name="imgContent" Content="{StaticResource Image.1}" Width="900" Height="400" Margin="200, -650,0,0"/>
+            <Button x:Name="floor1" Click="Button_Click" Width="17" Margin="0,-650,-1080,0" Background="#00673AB7" BorderBrush="#00673AB7"/>
+            <Label x:Name="pereglad" Content="Останні переглянуті товари" Margin="-470,-170,-10,100" FontSize="16" Width="240" Height="35" ></Label>
+            <Button x:Name="floor2" Click="Button_Click2" Width="17" Margin="0,-650,680,0" Background="#00673AB7" BorderBrush="#00673AB7" Visibility="Hidden"/>
+
+            <Menu x:Name="menutwo" Margin="-100, -100,0,0" Height="300" Width="600" >
+                <MenuItem Width="200" Height="300">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/per1.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="300">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/per2.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="300">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/per3.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+            </Menu>
+            <Menu x:Name="menuthird" Margin="-980, -250,0,0" Height="120" Width="200" >
+                <MenuItem Width="200" Height="40">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/centr.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="40">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/chat.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+                <MenuItem Width="200" Height="40">
+                    <MenuItem.Background>
+                        <ImageBrush ImageSource="/tochki.png"/>
+                    </MenuItem.Background>
+                </MenuItem>
+            </Menu>
         </StackPanel>
         <Border CornerRadius="2" x:Name="lupa" Width="30" Height="29" VerticalAlignment="Top" Margin="-522,25,0,56" BorderBrush="Black"  >
 
@@ -40,7 +171,7 @@
         </Button>
         <Button x:Name="naiti"  BorderBrush="Black" HorizontalAlignment="Stretch" Width="60" Height="31" Margin="610,24,0,0" VerticalAlignment="Top">
             <Button.Background>
-                <ImageBrush ImageSource="/zelenka.png"/>
+                <ImageBrush ImageSource="/3nai.png"/>
             </Button.Background>
         </Button>
         <Button x:Name="rozetka"  BorderBrush="Black" HorizontalAlignment="Stretch" Width="120" Height="31" Margin="-960,24,0,0" VerticalAlignment="Top">
@@ -54,7 +185,7 @@
             </Button.Background>
         </Button>
         <Button x:Name="ru" materialDesign:TextBlockAssist.AutoToolTip="False" Content="RU"  BorderBrush="Black" HorizontalAlignment="Center" Width="50" Height="31" Margin="750,24,0,0" VerticalAlignment="Top" Background="Black" MouseEnter="ru_MouseEnter" MouseLeave="ru_MouseLeave">
-            
+
         </Button>
         <Button x:Name="UA" materialDesign:TextBlockAssist.AutoToolTip="False" Content="UA"  BorderBrush="Black" HorizontalAlignment="Center" Width="50" Height="31" Margin="850,24,0,0" VerticalAlignment="Top" Background="Black" MouseEnter="UA_MouseEnter" MouseLeave="UA_MouseLeave">
             <Button.Foreground>
@@ -65,6 +196,36 @@
             </Button.Foreground>
 
         </Button>
+        <Button x:Name="chel"  BorderBrush="Black" HorizontalAlignment="Stretch" Width="31" Height="31" Margin="950,24,0,0" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/che.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="korzina"  BorderBrush="Black" HorizontalAlignment="Stretch" Width="31" Height="31" Margin="1050,24,0,0" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/kor.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ser1"  BorderBrush="#00000000" HorizontalAlignment="Stretch" Width="31" Height="31" Margin="-380,490,-20,0" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/heart.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ser2"  BorderBrush="#00000000" HorizontalAlignment="Stretch" Width="31" Height="31" Margin="20,490,-20,0" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/heart.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="ser3"  BorderBrush="#00000000" HorizontalAlignment="Stretch" Width="31" Height="31" Margin="440,490,-20,0" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/heart.png"/>
+            </Button.Background>
+        </Button>
+
     </Grid>
+ 
+   
+        
+   
 </Window>
 
