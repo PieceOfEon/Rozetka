@@ -19,6 +19,19 @@
         <Image x:Key="Image.8" Source="/8.png"/>
         <Image x:Key="Image.1.1" Source="/me1.png"/>
         <Image x:Key="Image.1.2" Source="/me2.png"/>
+        <Image x:Key="Image.1.3" Source="/me3.png"/>
+        <Image x:Key="Image.1.4" Source="/me4.png"/>
+        <Image x:Key="Image.1.5" Source="/me5.png"/>
+        <Image x:Key="Image.1.6" Source="/me6.png"/>
+        <Image x:Key="Image.1.7" Source="/me7.png"/>
+        <Image x:Key="Image.1.8" Source="/me8.png"/>
+        <Image x:Key="Image.1.9" Source="/me9.png"/>
+        <Image x:Key="Image.1.10" Source="/me10.png"/>
+        <Image x:Key="Image.1.11" Source="/me11.png"/>
+        <Image x:Key="Image.1.12" Source="/me12.png"/>
+        <Image x:Key="Image.1.13" Source="/me13.png"/>
+        <Image x:Key="Image.1.14" Source="/me14.png"/>
+        <Image x:Key="Image.1.15" Source="/me15.png"/>
     </Window.Resources>
     <Window.Background>
         <ImageBrush/>
@@ -228,7 +241,7 @@
                 <ImageBrush ImageSource="/heart.png"/>
             </Button.Background>
         </Button>
-        <Border x:Name="borderItem" Width="1200" Height="480" VerticalAlignment="Center" Visibility="Visible" Background="#7F000000" Margin="0,0,0,190">
+        <Border x:Name="borderItem" Width="1200" Height="480" VerticalAlignment="Center" Visibility="Hidden" Background="#7F000000" Margin="0,0,0,190">
 
             <Menu x:Name="menufour" Height="488" Width="200" Margin="0,0,1000,-8">
                 <Menu.Background>
@@ -246,67 +259,67 @@
                     </MenuItem.Background>
 
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm4" Width="200" Height="30" MouseEnter="mm4_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m3.png"/>
                     </MenuItem.Background>
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm5" Width="200" Height="30" MouseEnter="mm5_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m4.png"/>
                     </MenuItem.Background>
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm6" Width="200" Height="30" MouseEnter="mm6_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m5.png"/>
                     </MenuItem.Background>
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm7" Width="200" Height="30" MouseEnter="mm7_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m6.png"/>
                     </MenuItem.Background>
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm8" Width="200" Height="30" MouseEnter="mm8_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m7.png"/>
                     </MenuItem.Background>
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm9" Width="200" Height="30" MouseEnter="mm9_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m8.png"/>
                     </MenuItem.Background>
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm10" Width="200" Height="30" MouseEnter="mm10_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m9.png"/>
                     </MenuItem.Background>
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm11" Width="200" Height="30" MouseEnter="mm11_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m10.png"/>
                     </MenuItem.Background>
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm12" Width="200" Height="30" MouseEnter="mm12_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m12.png"/>
                     </MenuItem.Background>
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm13" Width="200" Height="30" MouseEnter="mm13_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m13.png"/>
                     </MenuItem.Background>
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm14" Width="200" Height="30" MouseEnter="mm14_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m14.png"/>
                     </MenuItem.Background>
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm15" Width="200" Height="30" MouseEnter="mm15_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m15.png"/>
                     </MenuItem.Background>
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm16" Width="200" Height="30" MouseEnter="mm16_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m16.png"/>
                     </MenuItem.Background>
@@ -319,7 +332,7 @@
 
             </Menu>
         </Border>
-        <Border x:Name="borderBigMenu" Height="480" VerticalAlignment="Center" Visibility="Visible" Margin="0,0,-15,190" >
+        <Border x:Name="borderBigMenu" Height="480" VerticalAlignment="Center" Visibility="Hidden" Margin="0,0,-15,190" >
             <ContentPresenter x:Name="img2" Content="{StaticResource Image.1.1}"></ContentPresenter>
         </Border>
     </Grid>

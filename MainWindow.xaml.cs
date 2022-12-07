@@ -167,12 +167,14 @@ namespace Rozetka
             {
                 borderItem.Visibility = Visibility.Hidden;
                 borderBigMenu.Visibility = Visibility.Hidden;
+                
 
             }
             else
             {
                 borderItem.Visibility = Visibility.Visible;
-                
+                img2.Content = Resources["Image.1.1"];
+                borderBigMenu.Visibility = Visibility.Visible;
             }
             
         }
@@ -187,6 +189,86 @@ namespace Rozetka
         {
             borderBigMenu.Visibility = Visibility.Visible;
             img2.Content = Resources["Image.1.2"];
+        }
+
+        private void mm4_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.3"];
+        }
+
+        private void mm5_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.4"];
+        }
+
+        private void mm6_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.5"];
+        }
+
+        private void mm7_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.6"];
+        }
+
+        private void mm8_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.7"];
+        }
+
+        private void mm9_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.8"];
+        }
+
+        private void mm10_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.9"];
+        }
+
+        private void mm11_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.10"];
+        }
+
+        private void mm12_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.11"];
+
+        }
+
+        private void mm13_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.12"];
+
+        }
+
+        private void mm14_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.13"];
+        }
+
+        private void mm15_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.14"];
+        }
+
+        private void mm16_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.15"];
         }
     }
 }
