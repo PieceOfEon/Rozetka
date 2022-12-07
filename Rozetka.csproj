@@ -43,6 +43,7 @@
     <None Remove="m8.png" />
     <None Remove="m9.png" />
     <None Remove="me1.png" />
+    <None Remove="me2.png" />
     <None Remove="micro.png" />
     <None Remove="per1.png" />
     <None Remove="per2.png" />
@@ -94,6 +95,7 @@
     <Resource Include="m8.png" />
     <Resource Include="m9.png" />
     <Resource Include="me1.png" />
+    <Resource Include="me2.png" />
     <Resource Include="micro.png" />
     <Resource Include="per1.png" />
     <Resource Include="per2.png" />

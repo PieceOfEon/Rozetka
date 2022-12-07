@@ -179,7 +179,14 @@ namespace Rozetka
         private void mmm2_MouseEnter(object sender, MouseEventArgs e)
         {
             borderBigMenu.Visibility = Visibility.Visible;
-            MenuBigImage.ImageSource = new BitmapImage(new Uri("Image.8", UriKind.RelativeOrAbsolute));
+            img2.Content = Resources["Image.1.1"];
+            
+        }
+
+        private void mm3_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            img2.Content = Resources["Image.1.2"];
         }
     }
 }

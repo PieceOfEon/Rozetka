@@ -17,7 +17,12 @@
         <Image x:Key="Image.6" Source="/6.png"/>
         <Image x:Key="Image.7" Source="/7.png"/>
         <Image x:Key="Image.8" Source="/8.png"/>
+        <Image x:Key="Image.1.1" Source="/me1.png"/>
+        <Image x:Key="Image.1.2" Source="/me2.png"/>
     </Window.Resources>
+    <Window.Background>
+        <ImageBrush/>
+    </Window.Background>
     <Grid Background="White">
         <Border Width="1200" Background="Black" Height="80" VerticalAlignment="Top"/>
 
@@ -223,22 +228,19 @@
                 <ImageBrush ImageSource="/heart.png"/>
             </Button.Background>
         </Button>
-        <Border x:Name="borderItem" Width="1200" Height="480" VerticalAlignment="Center" Visibility="Hidden" Background="#7F000000">
+        <Border x:Name="borderItem" Width="1200" Height="480" VerticalAlignment="Center" Visibility="Visible" Background="#7F000000" Margin="0,0,0,190">
 
-            <Menu x:Name="menufour" Height="488" Width="200" Margin="0,0,1000,-8" >
+            <Menu x:Name="menufour" Height="488" Width="200" Margin="0,0,1000,-8">
                 <Menu.Background>
                     <ImageBrush/>
                 </Menu.Background>
-                <MenuItem x:Name="mmm2" Header="" Width="200" Height="30" MouseEnter="mmm2_MouseEnter">
+                <MenuItem x:Name="mmm2" Width="200" Height="30" MouseEnter="mmm2_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m11.png"/>
                     </MenuItem.Background>
-                    <MenuItem Width="200" Height="50">
-                        <Menu></Menu>
-                    </MenuItem>
 
                 </MenuItem>
-                <MenuItem Width="200" Height="30">
+                <MenuItem x:Name="mm3" Width="200" Height="30" MouseEnter="mm3_MouseEnter">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m2.png"/>
                     </MenuItem.Background>
@@ -317,11 +319,8 @@
 
             </Menu>
         </Border>
-        <Border x:Name="borderBigMenu" Width="1000" Height="480" VerticalAlignment="Center" Visibility="Hidden" Margin="0,0,-200,0" >
-            <!--<ContentPresenter x:Name="imgContent2" Content="{StaticResource Image.1}" Width="900" Height="400" Margin="400, -650,0,0"/>-->
-            <Border.Background>
-                <ImageBrush x:Name="MenuBigImage" ImageSource="/me1.png"/>
-            </Border.Background>
+        <Border x:Name="borderBigMenu" Height="480" VerticalAlignment="Center" Visibility="Visible" Margin="0,0,-15,190" >
+            <ContentPresenter x:Name="img2" Content="{StaticResource Image.1.1}"></ContentPresenter>
         </Border>
     </Grid>
 
