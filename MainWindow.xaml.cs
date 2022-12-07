@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -54,7 +55,7 @@ namespace Rozetka
 
         private void Menu_ContextMenuOpening(object sender, ContextMenuEventArgs e)
         {
-
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -158,6 +159,27 @@ namespace Rozetka
                 imgContent.Content = Resources["Image.8"];
                 floor2.Visibility = Visibility.Visible;
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if(borderItem.Visibility==Visibility.Visible)
+            {
+                borderItem.Visibility = Visibility.Hidden;
+                borderBigMenu.Visibility = Visibility.Hidden;
+
+            }
+            else
+            {
+                borderItem.Visibility = Visibility.Visible;
+                
+            }
+            
+        }
+        private void mmm2_MouseEnter(object sender, MouseEventArgs e)
+        {
+            borderBigMenu.Visibility = Visibility.Visible;
+            MenuBigImage.ImageSource = new BitmapImage(new Uri("Image.8", UriKind.RelativeOrAbsolute));
         }
     }
 }
