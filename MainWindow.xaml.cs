@@ -270,5 +270,7 @@ namespace Rozetka
             borderBigMenu.Visibility = Visibility.Visible;
             img2.Content = Resources["Image.1.15"];
         }
+
+     
     }
 }

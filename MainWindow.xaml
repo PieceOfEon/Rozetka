@@ -8,6 +8,7 @@
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="Rozetka.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="854" Width="1200">
+
     <Window.Resources>
         <Image x:Key="Image.1" Source="/first.png"/>
         <Image x:Key="Image.2" Source="/2.png"/>
@@ -37,17 +38,29 @@
         <ImageBrush/>
     </Window.Background>
     <Grid Background="White">
-        <Border Width="1200" Background="Black" Height="80" VerticalAlignment="Top"/>
+        <Border x:Name="borderBlack" Width="1200" Background="Black" Height="80" VerticalAlignment="Top"/>
 
         <StackPanel>
 
             <TextBox Padding="2" x:Name="search"   Width="500" Height="30" Margin="25" Background="White"  materialDesign:HintAssist.Hint="Я шукаю..." Style="{StaticResource ResourceKey=MaterialDesignTextBox}" FontSize="16" BorderThickness="0,0,0,1" mah:ControlsHelper.FocusBorderThickness="0,0,10,0"/>
 
             <Grid Margin="0 0 0 25">
-                <Button BorderBrush="Black" HorizontalAlignment="Stretch" Width="96" Margin="-700,-56,0,56" Click="Button_Click_1">
+              
+                <Button x:Name="kata" BorderBrush="Black" HorizontalAlignment="Stretch" Width="96" Margin="-700,-56,0,56" Click="Button_Click_1">
                     <Button.Background>
                         <ImageBrush ImageSource="katalog.png"/>
                     </Button.Background>
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="Loaded">
+                            <BeginStoryboard>
+                                <Storyboard Timeline.DesiredFrameRate="60">
+                                    <DoubleAnimation Storyboard.TargetName="kata" Storyboard.TargetProperty="Width"
+                                 From="96" To="-300" AutoReverse="False" Duration="0:0:6" RepeatBehavior="Forever"
+                                 DecelerationRatio="1"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
 
                 </Button>
             </Grid>
@@ -56,9 +69,7 @@
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/m11.png"/>
                     </MenuItem.Background>
-                    <MenuItem Width="200" Height="50">
-                        <Menu></Menu>
-                    </MenuItem>
+                   
 
                 </MenuItem>
                 <MenuItem Width="200" Height="30">
@@ -189,24 +200,33 @@
                 <ImageBrush ImageSource="/micro.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="naiti"  BorderBrush="Black" HorizontalAlignment="Stretch" Width="60" Height="31" Margin="610,24,0,0" VerticalAlignment="Top">
-            <Button.Background>
-                <ImageBrush ImageSource="/3nai.png"/>
-            </Button.Background>
-        </Button>
         <Button x:Name="rozetka"  BorderBrush="Black" HorizontalAlignment="Stretch" Width="120" Height="31" Margin="-960,24,0,0" VerticalAlignment="Top">
             <Button.Background>
                 <ImageBrush ImageSource="/rozetka.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="tchk"  BorderBrush="Black" HorizontalAlignment="Stretch" Width="37" Height="31" Margin="-1125,24,0,0" VerticalAlignment="Top">
+        <Button BorderBrush="Black" HorizontalAlignment="Stretch" Width="37" Height="31" Margin="-1125,24,0,0" VerticalAlignment="Top">
             <Button.Background>
                 <ImageBrush ImageSource="/tchk.png"/>
             </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="ButtonBase.Click">
+                    <BeginStoryboard>
+                        <Storyboard Timeline.DesiredFrameRate="60">
+                            <DoubleAnimation Storyboard.TargetName="border3" Storyboard.TargetProperty="(Canvas.Left)"
+                                 From="-950" To="-550" AutoReverse="False" Duration="0:0:1.5" RepeatBehavior="1x"
+                                 DecelerationRatio="1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
         </Button>
-        <Button x:Name="ru" materialDesign:TextBlockAssist.AutoToolTip="False" Content="RU"  BorderBrush="Black" HorizontalAlignment="Center" Width="50" Height="31" Margin="750,24,0,0" VerticalAlignment="Top" Background="Black" MouseEnter="ru_MouseEnter" MouseLeave="ru_MouseLeave">
-
+        <Button x:Name="naiti"  BorderBrush="Black" HorizontalAlignment="Stretch" Width="60" Height="31" Margin="610,24,0,0" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/3nai.png"/>
+            </Button.Background>
         </Button>
+        <Button x:Name="ru" materialDesign:TextBlockAssist.AutoToolTip="False" Content="RU"  BorderBrush="Black" HorizontalAlignment="Center" Width="50" Height="31" Margin="750,24,0,0" VerticalAlignment="Top" Background="Black" MouseEnter="ru_MouseEnter" MouseLeave="ru_MouseLeave"/>
         <Button x:Name="UA" materialDesign:TextBlockAssist.AutoToolTip="False" Content="UA"  BorderBrush="Black" HorizontalAlignment="Center" Width="50" Height="31" Margin="850,24,0,0" VerticalAlignment="Top" Background="Black" MouseEnter="UA_MouseEnter" MouseLeave="UA_MouseLeave">
             <Button.Foreground>
                 <LinearGradientBrush EndPoint="0.5,0.7" StartPoint="0.5,0.3">
@@ -241,9 +261,35 @@
                 <ImageBrush ImageSource="/heart.png"/>
             </Button.Background>
         </Button>
-        <Border x:Name="borderItem" Width="1200" Height="480" VerticalAlignment="Center" Visibility="Hidden" Background="#7F000000" Margin="0,0,0,190">
+        <Grid>
 
-            <Menu x:Name="menufour" Height="488" Width="200" Margin="0,0,1000,-8">
+            <Canvas Height="100" Width="100" Background="#00FFB6C1">
+                <Border x:Name="border3" Width="400" Height="839" Canvas.Left="-950" Canvas.Top="-370" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Border.Background>
+                        <ImageBrush ImageSource="/border3p.png"/>
+                    </Border.Background>
+                    <Button x:Name="buttonX" Height="30" Width="30" Margin="350,15,16,799" Background="#00673AB7" BorderBrush="#00673AB7">
+                        <Button.Triggers>
+                            <EventTrigger RoutedEvent="Button.Click">
+                                <EventTrigger.Actions>
+                                    <BeginStoryboard>
+                                        <Storyboard Timeline.DesiredFrameRate="60">
+                                            <DoubleAnimation Storyboard.TargetName="border3" Storyboard.TargetProperty="(Canvas.Left)"
+                                 From="-550" To="-950" AutoReverse="False" Duration="0:0:1" RepeatBehavior="1x"
+                                 DecelerationRatio="1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger.Actions>
+                            </EventTrigger>
+                        </Button.Triggers>
+                    </Button>
+                </Border>
+            </Canvas>
+
+        </Grid>
+        <Border x:Name="borderItem" Width="1200" Height="800" VerticalAlignment="Center" Visibility="Hidden" Background="#7F000000" Margin="0,0,0,-120">
+
+            <Menu x:Name="menufour" Height="488" Width="200" Margin="0,-300,1000,-8">
                 <Menu.Background>
                     <ImageBrush/>
                 </Menu.Background>
@@ -332,7 +378,7 @@
 
             </Menu>
         </Border>
-        <Border x:Name="borderBigMenu" Height="480" VerticalAlignment="Center" Visibility="Hidden" Margin="0,0,-15,190" >
+        <Border x:Name="borderBigMenu" Height="480" VerticalAlignment="Center" Visibility="Hidden" Margin="0,0,-15,180" >
             <ContentPresenter x:Name="img2" Content="{StaticResource Image.1.1}"></ContentPresenter>
         </Border>
     </Grid>

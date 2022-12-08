@@ -17,6 +17,7 @@
     <None Remove="7.png" />
     <None Remove="8.png" />
     <None Remove="Anime-фэндомы-makima-%28chainsaw-man%29-Chainsaw-Man-7664765.jpeg" />
+    <None Remove="border3p.png" />
     <None Remove="centr.png" />
     <None Remove="chat.png" />
     <None Remove="che.png" />
@@ -64,6 +65,7 @@
     <None Remove="rozetka.png" />
     <None Remove="tchk.png" />
     <None Remove="tochki.png" />
+    <None Remove="troetoch.png" />
     <None Remove="wfone.png" />
     <None Remove="zelenka.png" />
   </ItemGroup>
@@ -82,6 +84,7 @@
     <Resource Include="7.png" />
     <Resource Include="8.png" />
     <Resource Include="Anime-фэндомы-makima-(chainsaw-man)-Chainsaw-Man-7664765.jpeg" />
+    <Resource Include="border3p.png" />
     <Resource Include="centr.png" />
     <Resource Include="chat.png" />
     <Resource Include="che.png" />
@@ -129,6 +132,7 @@
     <Resource Include="rozetka.png" />
     <Resource Include="tchk.png" />
     <Resource Include="tochki.png" />
+    <Resource Include="troetoch.png" />
     <Resource Include="wfone.png" />
     <Resource Include="zelenka.png" />
   </ItemGroup>
